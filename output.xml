@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.13.0 on win32)" generated="2024-12-31T02:17:31.507008" rpa="false" schemaversion="5">
+<suite id="s1" name="Linkedin" source="c:\Users\abdoa\development1\robot-scripts\android-test\Tests\Linkedin.robot">
+<test id="s1-t1" name="Should be able to add post" line="34">
+<kw name="Open an application" owner="OpenApplicationScreen">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>${APPIUM_URL}</arg>
+<arg>platformName=${PLATFORM}</arg>
+<arg>deviceName=${DEVICE_NAME}</arg>
+<arg>appPackage=${LINKEDIN_APPLICATION_ID}</arg>
+<arg>appActivity=${LINKEDIN_APPLICATION_ACTIVITY}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.1/cli/args/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" start="2024-12-31T02:17:32.136981" elapsed="15.390487"/>
+</kw>
+<status status="PASS" start="2024-12-31T02:17:32.136003" elapsed="15.391979"/>
+</kw>
+<kw name="Verify Page Loaded" owner="LoginScreen">
+<kw name="Wait for Element and then Click" owner="LoginScreen">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-12-31T02:17:49.530477" level="INFO">criteria is com.linkedin.android:id/growth_prereg_fragment_login_button</msg>
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-12-31T02:17:47.533612" elapsed="1.999088"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-12-31T02:17:49.535675" level="INFO">Clicking element 'id=com.linkedin.android:id/growth_prereg_fragment_login_button'.</msg>
+<msg time="2024-12-31T02:17:49.664337" level="INFO">criteria is com.linkedin.android:id/growth_prereg_fragment_login_button</msg>
+<arg>${locator}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-12-31T02:17:49.533110" elapsed="0.131583"/>
+</kw>
+<arg>${LOGIN_BUTTON}</arg>
+<status status="PASS" start="2024-12-31T02:17:47.532817" elapsed="2.132103"/>
+</kw>
+<status status="PASS" start="2024-12-31T02:17:47.532084" elapsed="2.133011"/>
+</kw>
+<kw name="Login With Valid Credentials" owner="LoginScreen">
+<kw name="Wait for Element and then Click" owner="LoginScreen">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-12-31T02:17:50.870138" level="INFO">criteria is com.linkedin.android:id/growth_login_join_fragment_email_address
+criteria is com.linkedin.android:id/growth_login_join_fragment_email_address</msg>
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-12-31T02:17:49.668200" elapsed="1.202221"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-12-31T02:17:50.873122" level="INFO">Clicking element 'id=com.linkedin.android:id/growth_login_join_fragment_email_address'.</msg>
+<msg time="2024-12-31T02:17:51.922524" level="INFO">criteria is com.linkedin.android:id/growth_login_join_fragment_email_address</msg>
+<arg>${locator}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-12-31T02:17:50.870739" elapsed="1.052164"/>
+</kw>
+<arg>${ENTER_EMAIL}</arg>
+<status status="PASS" start="2024-12-31T02:17:49.667219" elapsed="2.256156"/>
+</kw>
+<kw name="Input User email" owner="LoginScreen">
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-12-31T02:17:51.928107" level="INFO">Typing text 'alaa.abdo2121abdo@gmail.com' into text field 'id=com.linkedin.android:id/growth_login_join_fragment_email_address'</msg>
+<msg time="2024-12-31T02:17:52.827112" level="INFO">criteria is com.linkedin.android:id/growth_login_join_fragment_email_address</msg>
+<arg>${ENTER_EMAIL}</arg>
+<arg>${EMAIL}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-12-31T02:17:51.924700" elapsed="0.902665"/>
+</kw>
+<arg>${EMAIL}</arg>
+<status status="PASS" start="2024-12-31T02:17:51.923979" elapsed="0.903566"/>
+</kw>
+<kw name="Input User Password" owner="LoginScreen">
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-12-31T02:17:52.830322" level="INFO">Typing text '6Aw812xvc@@' into text field 'id=com.linkedin.android:id/growth_login_join_fragment_password'</msg>
+<msg time="2024-12-31T02:17:53.678103" level="INFO">criteria is com.linkedin.android:id/growth_login_join_fragment_password</msg>
+<arg>${ENTER_PASSWORD}</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-12-31T02:17:52.828244" elapsed="0.850079"/>
+</kw>
+<arg>${PASSWORD}</arg>
+<status status="PASS" start="2024-12-31T02:17:52.827785" elapsed="0.850680"/>
+</kw>
+<status status="PASS" start="2024-12-31T02:17:49.666302" elapsed="4.012268"/>
+</kw>
+<kw name="Click &quot;Login&quot; Button" owner="LoginScreen">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-12-31T02:17:53.682012" level="INFO">Clicking element 'id=com.linkedin.android:id/growth_login_fragment_sign_in'.</msg>
+<msg time="2024-12-31T02:17:54.256284" level="INFO">criteria is com.linkedin.android:id/growth_login_fragment_sign_in</msg>
+<arg>${LOGIN_SUBMIT}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-12-31T02:17:53.679535" elapsed="0.577050"/>
+</kw>
+<status status="PASS" start="2024-12-31T02:17:53.679055" elapsed="0.577726"/>
+</kw>
+<kw name="Verfiy Next Page" owner="LoginScreen">
+<kw name="Wait for Element and then Click" owner="LoginScreen">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-12-31T02:17:57.579635" level="INFO">criteria is com.linkedin.android:id/notif_permission_signin_text
+criteria is com.linkedin.android:id/notif_permission_signin_text</msg>
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-12-31T02:17:54.259212" elapsed="3.320723"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-12-31T02:17:57.581969" level="INFO">Clicking element 'id=com.linkedin.android:id/notif_permission_signin_text'.</msg>
+<msg time="2024-12-31T02:17:57.710745" level="INFO">criteria is com.linkedin.android:id/notif_permission_signin_text</msg>
+<arg>${locator}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-12-31T02:17:57.580250" elapsed="0.130807"/>
+</kw>
+<arg>${SKIP_FOR_NOW}</arg>
+<status status="PASS" start="2024-12-31T02:17:54.258476" elapsed="3.452765"/>
+</kw>
+<status status="PASS" start="2024-12-31T02:17:54.257885" elapsed="3.453491"/>
+</kw>
+<kw name="Click Add Post" owner="AddPost">
+<kw name="Wait for Element and then Click" owner="AddPost">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-12-31T02:17:59.851721" level="INFO">criteria is com.linkedin.android:id/tab_post</msg>
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-12-31T02:17:57.713167" elapsed="2.139112"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-12-31T02:17:59.854102" level="INFO">Clicking element 'id=com.linkedin.android:id/tab_post'.</msg>
+<msg time="2024-12-31T02:17:59.979207" level="INFO">criteria is com.linkedin.android:id/tab_post</msg>
+<arg>${locator}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-12-31T02:17:59.852526" elapsed="0.127059"/>
+</kw>
+<arg>${ADD_POST_BUTTON}</arg>
+<status status="PASS" start="2024-12-31T02:17:57.712601" elapsed="2.267204"/>
+</kw>
+<status status="PASS" start="2024-12-31T02:17:57.712060" elapsed="2.267908"/>
+</kw>
+<kw name="Add Post details" owner="AddPost">
+<kw name="Wait for Element and then Click" owner="AddPost">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-12-31T02:18:03.092150" level="INFO">criteria is com.linkedin.android:id/share_compose_text_input_entities
+criteria is com.linkedin.android:id/share_compose_text_input_entities</msg>
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-12-31T02:17:59.982324" elapsed="3.110158"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-12-31T02:18:03.094275" level="INFO">Clicking element 'id=com.linkedin.android:id/share_compose_text_input_entities'.</msg>
+<msg time="2024-12-31T02:18:03.671032" level="INFO">criteria is com.linkedin.android:id/share_compose_text_input_entities</msg>
+<arg>${locator}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-12-31T02:18:03.092746" elapsed="0.578492"/>
+</kw>
+<arg>${POST_SPACE}</arg>
+<status status="PASS" start="2024-12-31T02:17:59.981716" elapsed="3.689661"/>
+</kw>
+<kw name="Add post" owner="AddPost">
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-12-31T02:18:03.674053" level="INFO">Typing text 'I'm looking for a QA job' into text field 'id=com.linkedin.android:id/share_compose_text_input_entities'</msg>
+<msg time="2024-12-31T02:18:04.465192" level="INFO">criteria is com.linkedin.android:id/share_compose_text_input_entities</msg>
+<arg>${POST_SPACE}</arg>
+<arg>${POST_TEXT}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-12-31T02:18:03.672077" elapsed="0.793444"/>
+</kw>
+<arg>${POST_TEXT}</arg>
+<status status="PASS" start="2024-12-31T02:18:03.671676" elapsed="0.794096"/>
+</kw>
+<status status="PASS" start="2024-12-31T02:17:59.981100" elapsed="4.484887"/>
+</kw>
+<kw name="Click Post" owner="AddPost">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-12-31T02:18:04.469989" level="INFO">Clicking element 'id=com.linkedin.android:id/share_compose_post_button'.</msg>
+<msg time="2024-12-31T02:18:05.399266" level="INFO">criteria is com.linkedin.android:id/share_compose_post_button</msg>
+<arg>${POST_BUTTON}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-12-31T02:18:04.467333" elapsed="0.932472"/>
+</kw>
+<status status="PASS" start="2024-12-31T02:18:04.466769" elapsed="0.933424"/>
+</kw>
+<status status="PASS" start="2024-12-31T02:17:32.135097" elapsed="33.269026"/>
+</test>
+<status status="PASS" start="2024-12-31T02:17:31.515980" elapsed="33.896972"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Linkedin">Linkedin</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
